@@ -4,7 +4,7 @@
   "description": "create functions and make their tests pass",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/fatiha-dev/TDD/issues"
   },
-  "homepage": "https://github.com/fatiha-dev/TDD#readme"
+  "homepage": "https://github.com/fatiha-dev/TDD#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
 }
