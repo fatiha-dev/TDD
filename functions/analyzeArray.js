@@ -1,24 +1,39 @@
 function analyzeArray(arr) {
+  // Get the length of the array
+  const arrayLength = arr.length;
+
+  if( arrayLength != 0) {
     // Find the minimum value in the array
-    const minValue = Math.min(...arr);
+    const minValue = getMin(arr);
   
     // Find the maximum value in the array
-    const maxValue = Math.max(...arr);
+    const maxValue = getMax(arr);
   
     // Calculate the average value of the array
-    const sum = arr.reduce((acc, curr) => acc + curr, 0);
-    const averageValue = sum / arr.length;
-  
-    // Get the length of the array
-    const arrayLength = arr.length;
-  
+    const averageValue = getAverage(arr);
     // Create an object with the results
-    const analysisObj = {
+    return {
       minValue: minValue,
       maxValue: maxValue,
       averageValue: averageValue,
       arrayLength: arrayLength,
     };
-  
-    return analysisObj;
+  } else {
+    return null
   }
+  }
+function getMin(arr) {
+  return Math.min(...arr);
+}
+
+function getMax(arr) {
+  return Math.max(...arr);
+}
+
+function getAverage(arr) {
+  const sum = arr.reduce((acc, curr)=> acc + curr,0);
+  return sum / arr.length;
+}
+  const arr = [2,7,3,0]
+  console.log(getAverage(arr));
+  module.exports = analyzeArray;
