@@ -28,9 +28,4 @@ function caesarCipher(str, shift) {
     // Convert the array of characters back to a string and return it
     return ciphered.join('');
   }
-  const message = 'Hello, World!';
-  const shift = 3;
-  const ciphered = caesarCipher(message, shift);
-  
-  console.log(ciphered);
 module.exports = caesarCipher;
